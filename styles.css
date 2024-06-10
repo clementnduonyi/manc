@@ -20,7 +20,7 @@ header{
 article{
   max-width: 800px;
   margin: 8px auto;
-  color: red;
+  color: rgba(250, 163, 33, 0.993);
   text-align: center;
   font-size: 16px;
   font-weight: 900;
@@ -33,10 +33,10 @@ article span{
 .chat-container {
   max-width: 800px;
   margin: 0 auto 24px auto;
-  height: 200px;
+  height: 250px;
 }
 .chat-box {
-  border: 1px solid #ccc;
+  border: 1px solid #3586ff;
   padding: 20px;
   height: 100%;
   overflow-y: scroll;
@@ -68,7 +68,7 @@ article span{
   background-color:#E7D6C5;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 5px red;
+  box-shadow: 0 5px rgba(250, 163, 33, 0.993);
 }
 
 .send-btn:active {
@@ -91,26 +91,27 @@ article span{
 
 .footer {
   position: relative;
-  top: 100px;
+  top: 186px;
   bottom: 0;
   width: 100%;
   background: #3586ff;
-  height: 150px;
-  padding: 10px 50px;
+  height: 58px;
+  padding: 0px 50px;
 }
 
 .footer-items{
   display: flex;
   justify-content: space-between;
+  
 }
 
 .social-icon,
 .menu {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
- /* margin: 5px 0;*/
+  margin: 5px 0;
   flex-wrap: wrap;
 }
 
@@ -120,7 +121,7 @@ article span{
 }
 
 .social-icon__link {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
@@ -131,7 +132,7 @@ article span{
 }
 
 .menu__link {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
@@ -145,25 +146,19 @@ article span{
   opacity: 1;
 }
 
-.footer p {
-  color: #fff;
-  text-align: center;
-  line-height: 8px;
-  margin: 6px 0 10px 10px;
-  font-size: 1rem;
-  font-weight: 300;
+.info, .copy{
+  color: rgba(250, 163, 33, 0.993);
+  font-weight: 700;
 }
 
-.footer .info{
-  margin: 0;
-}
+
 
 .wave {
   position: absolute;
-  top: -50px;
+  top: -40px;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 45px;
   background: url("https://i.ibb.co/wQZVxxk/wave.png");
   background-size: 1000px 100px;
 }

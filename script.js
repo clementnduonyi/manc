@@ -1,3 +1,15 @@
+function stripMarkdown(text) {
+  // Remove Markdown characters
+  return text
+    .replace(/[*_~`]/g, '') // Remove *, _, ~, `
+    .replace(/\*\*/g, '')   // Remove **
+    .replace(/##/g, '')     // Remove ##
+    .replace(/!\[.*?\]\(.*?\)/g, '') // Remove images
+    .replace(/\[.*?\]\(.*?\)/g, '')  // Remove links
+    .replace(/^>/gm, '')    // Remove blockquotes
+    .replace(/^\s*[-+*]\s+/gm, '') // Remove list items
+    .replace(/^\d+\.\s+/gm, ''); // Remove ordered list items
+}
 
 async function sendMessage() {
   const userInput = document.getElementById("user-input").value;
@@ -6,7 +18,8 @@ async function sendMessage() {
   const chatBox = document.getElementById("chat-box");
   const userMessage = document.createElement("div");
   userMessage.style.background="#f0e6db";
-  userMessage.style.marginBottom="2rem"
+  userMessage.style.marginBottom="1rem"
+  userMessage.style.marginTop="1rem"
   userMessage.style.padding="1rem"
   userMessage.style.borderRadius="10px"
   userMessage.innerHTML = `<b>You:</b> ${userInput}`;
@@ -23,12 +36,12 @@ async function sendMessage() {
 
     const result = await response.json();
 
-    
+
     const modelMessage = document.createElement("div");
     modelMessage.style.background="#E7D6C5"
     modelMessage.style.padding="1rem"
     modelMessage.style.borderRadius="10px"
-    modelMessage.innerHTML = `<b>Chatbot:</b> ${escapeHTML(result.response)}`;
+    modelMessage.innerHTML = `<b>MANC⚓:</b> ${stripMarkdown(escapeHTML(result.response))}`;
     chatBox.appendChild(modelMessage);
   } catch (error) {
     console.error('Error:', error);
@@ -48,7 +61,6 @@ function escapeHTML(str) {
   return div.innerHTML;
 }
 
-document.getElementById("send-button").addEventListener("click", sendMessage);
 
 document.getElementById("user-input").addEventListener("keypress", function(event) {
   if (event.key === "Enter") {

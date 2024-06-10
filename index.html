@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MANC - MAN Oron Chatbot </title>
-    <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           
+            <meta name="description" content=" Explore your future at the Maritime Academy of Nigeria, Oron with MANC⚓! Get instant answers to your questions about courses, admissions, campus life, and more. Let’s navigate your path to a successful maritime career together!">
+        <title> MANC - MAN Oron Chatbot </title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Include marked.js via CDN -->
+        
     </head>
     <body>
-        <header>Your Journey to Excellent Maritime Education/Career Starts Here.</header>
+        <!--<header>Your Journey to Excellent Maritime Education/Career Starts Here.</header>-->
         <article>
-            Explore your future at the Maritime Academy of Nigeria, Oron with <span>MANC⚓</span> Get instant answers to your questions about courses, admissions, campus life, and more. Let’s navigate your path to a successful maritime career together!
+            <h1>Meet <span>MANC⚓</span> </h1>
+           
         </article>
         <div class="chat-container">
             <div class="chat-box" id="chat-box"></div>
-            <input type="text" id="user-input" class="user-input" placeholder="Type your message here...">
+            <input type="text" id="user-input" class="user-input" placeholder="Ask MANC⚓...">
             <button class="send-btn"id="send-button"  onclick="sendMessage()">Send</button>
         </div>
         <footer class="footer">
@@ -24,6 +29,10 @@
               <div class="wave" id="wave4"></div>
             </div>
             <div class="footer-items">
+                <div class="info">
+                    <p>3MTTNigeria Fellow - FE/23/15378565</p>
+                    <p>AI/ML Track - Cohort 2</p>
+                </div>
                 <div class="social-icon-container">
                     <ul class="social-icon">
                         <li class="social-icon__item"><a class="social-icon__link" href="#">
@@ -39,13 +48,9 @@
                             <ion-icon name="logo-instagram"></ion-icon>
                           </a></li>
                     </ul>
-                    <div class="info">
-                        <p>3MTTNigeria Fellow</p>
-                        <p>AI/ML Track - Cohort 2</p>
-                    </div>
-                      
                 </div>
-                <div class="menu-container">   
+                <div class="menu-container">
+                    <div class="copy"><p>&copy;2024 Clement Nduonyi | All Rights Reserved</p></div>   
                     <ul class="menu">
                         <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
                         <li class="menu__item"><a class="menu__link" href="#">About</a></li>
@@ -53,15 +58,13 @@
                         <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
                         <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
                     </ul>
-                    
-                    <div class="info">
-                        <p>&copy;2024 Clement Nduonyi | All Rights Reserved</p>
-                    </div>
                 </div>
             </div>
           </footer>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="script.js"></script>
+
     </body>
 </html>
+
