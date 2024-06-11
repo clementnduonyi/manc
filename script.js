@@ -40,6 +40,7 @@ async function sendMessage() {
     const modelMessage = document.createElement("div");
     modelMessage.style.background="#E7D6C5"
     modelMessage.style.padding="1rem"
+    modelMessage.style.marginBottom="1rem"
     modelMessage.style.borderRadius="10px"
     modelMessage.innerHTML = `<b>MANC⚓:</b> ${stripMarkdown(escapeHTML(result.response))}`;
     chatBox.appendChild(modelMessage);

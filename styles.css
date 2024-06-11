@@ -48,29 +48,29 @@ article span {
   border-radius: 10px;
 }
 
-.animated-text {
+/*.animated-text {
   font-size: 16px;
   color: #3586ff;
   opacity: 0;
-  animation: fadeInBounce 2s ease-in-out infinite;
+  animation: fadeInBounce 5s linear infinite;
 }
 
 @keyframes fadeInBounce {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateX(-50px);
   }
   50% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   70% {
-    transform: translateY(-10px);
+    transform: translateX(-10px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
-}
+}*/
 
 .user-input {
   width: calc(100% - 86px);
