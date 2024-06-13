@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Maritime Education and Career Guidance</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #004080; /* Navy Blue */
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+        .navbar a:hover {
+            color: #ffd700; /* Gold */
+        }
+        .navbar-brand {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .navbar-menu {
+            display: flex;
+        }
+        .navbar-menu .nav-item {
+            list-style: none;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar-menu .nav-item {
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid #ffffff;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .navbar-menu.active {
+                display: flex;
+            }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Adjusted the top margin to bring it closer to the navbar */
+        }
+        h1 {
+            color: #004080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-brand">MANC</div>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="navbar-menu">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Career Guidance</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h1>About Us</h1>
+    <p>
+        MANC⚓ is currently in its formative age, yet it is poised to become a reliable partner in maritime education and career guidance. MANC aims to assist maritime officers in staying updated with industry trends and best practices. With a focus on technical proficiency, MANC is committed to providing robust support as you prepare for tests and exams, ensuring you excel in your maritime career.
+    </p>
+</div>
+
+<script>
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+        document.querySelector('.navbar-menu').classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

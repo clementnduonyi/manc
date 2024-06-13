@@ -8,103 +8,170 @@ body {
   align-items: center;
   min-height: 100vh;
   background-image: url("img/bgwithship.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
+  min-height: 100vh;
 }
 
-header {
-  color: #3586ff;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 900;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080; /* Navy Blue */
+  padding: 10px 20px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+.navbar a:hover {
+  color:rgba(250, 163, 33, 0.993); /* Gold */
+}
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.navbar-menu {
+  display: flex;
+}
+.navbar-menu .nav-item {
+  list-style: none;
 }
 
-article {
-  max-width: 800px;
-  margin: 8px auto;
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #004080; /* Navy Blue */
+      z-index: 1;
+  }
+  .navbar-menu .nav-item {
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #ffffff;
+  }
+  .menu-toggle {
+      display: flex;
+  }
+  .navbar-menu.active {
+      display: flex;
+  }
+}
+
+.manc{
   color: rgba(250, 163, 33, 0.993);
-  text-align: center;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-article span {
-  color: #3586ff;
   font-weight: bolder;
 }
+main{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px
+}
+
+
+.banner{
+  width: 40%;
+  /*padding: 10px;*/
+  font-weight: 700;
+}
+
 
 .chat-container {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto 24px auto;
-  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box; /* Include padding in width calculation */
+  flex-grow: 1; /* Ensure it grows to take available space */
 }
 
 .chat-box {
-  border: 1px solid #3586ff;
-  padding: 0 20px;
-  height: 100%;
-  overflow-y: scroll;
-  margin-bottom: 20px;
-  border-radius: 10px;
+  width: 80%;
+  height: 400px;
+  border: 1px solid #004080;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 0 10px; /* Add padding on mobile devices */
+  box-sizing: border-box; /* Include padding in width calculation */
+  flex-grow: 1; /* Ensure it grows to take available space */
 }
-
-/*.animated-text {
-  font-size: 16px;
-  color: #3586ff;
-  opacity: 0;
-  animation: fadeInBounce 5s linear infinite;
-}
-
-@keyframes fadeInBounce {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(-10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}*/
 
 .user-input {
-  width: calc(100% - 86px);
+  width: calc(80% - 0px);
+  max-width: 550px;
   padding: 10px;
-  transition: all 0.5s;
-  border-radius: 10px;
-  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
+
+.send-btn {
+  padding: 10px 20px;
+  background-color: #004080; /* Navy Blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /*width: 80%;
+  /*margin-top: 10px;*/
+  /*margin-bottom: 10px;*/
+}
+
+.send-btn:hover {
+  background-color: #ffd700; /* Gold */
+  color: #004080;
+}
+
+@media (max-width: 768px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    /*padding: ;*/
+  }
+  .banner{
+    width: 100%;
+    padding: 0;
+  }
+
+  .chat-container{
+    margin-top: 10px;
+  }
+
+  .chat-box{
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
 
 .user-input:focus {
   outline: none;
 }
 
-.send-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #3586ff;
-  background-color: #e7d6c5;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px rgba(250, 163, 33, 0.993);
-}
-
-.send-btn:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(8px);
-}
 
 .send-btn:hover {
   background-color: #f0e6db;
@@ -123,6 +190,9 @@ article span {
   width: 100%;
   background: #3586ff;
   margin-top: auto;
+  text-align: center;
+  /*padding: 20px 0;*/
+  margin-top: auto;
 }
 
 .footer-items {
@@ -132,8 +202,8 @@ article span {
   padding: 0 50px
 }
 
-.info,
-.copy {
+.info p,
+.copy p {
   color: rgba(250, 163, 33, 0.993);
   font-weight: 700;
 }
@@ -246,32 +316,39 @@ article span {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .chat-container {
-    
-    height: 300px;
-  }
-  .footer-items {
-    flex-direction: column;
-    align-items: center;
-  }
+  
+  .footer {
+    padding-bottom: 60px;
+}
+.user-input {
+    width: calc(100% - 60px);
+}
+.chat-container {
+    padding: 0 10px;
+    height: calc(100vh - 140px); /* Adjust the height to fit the screen on mobile devices */
+    overflow-y: auto; /* Ensure vertical scrolling */
+}
+.chat-box {
+    height: auto; /* Allow the chat box to grow naturally */
+}
+}
 
-  .footer .info,
-  .footer .social-icon-container,
-  .footer .menu-container {
-    text-align: center;
-    margin: 5px 0;
-  }
 
-  .footer .menu-container .menu
-  {
-    display: none;
-  }
-
-  .menu {
-    flex-direction: column;
-  }
-
-  .menu__item {
-    margin: 5px 0;
-  }
+/************************************** About page styling *****************************************************/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Adjusted the top margin to bring it closer to the navbar */
+}
+h1 {
+  color: #004080;
+  text-align: center;
+  margin-bottom: 20px;
+}
+p {
+  line-height: 1.6;
+  color: #333;
 }
