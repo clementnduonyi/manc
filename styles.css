@@ -234,6 +234,16 @@ main{
   transform: translateY(-10px);
 }
 
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon__item {
+  margin: 5px 0;
+}
+
 .menu__link {
   font-size: 1rem;
   color: #fff;
