@@ -48,7 +48,7 @@ async function sendMessage() {
     modelMessage.style.padding="1rem"
     modelMessage.style.marginBottom="1rem"
     modelMessage.style.borderRadius="10px"
-    modelMessage.innerHTML = `<b>MANC⚓:</b> ${stripMarkdown(escapeHTML(result.response))}`;
+    modelMessage.innerHTML = `<b>MARINO⚓:</b> ${stripMarkdown(escapeHTML(result.response))}`;
     chatBox.appendChild(modelMessage);
   } catch (error) {
     console.error('Error:', error);
